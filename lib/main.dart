@@ -29,13 +29,21 @@ class _MyHomePageState extends State<MyHomePage> {
   TextEditingController editingController = TextEditingController();
 
   final duplicateItems = ['Anas', 'Yousuf', 'Anas1', '4', '5', '6'];
-
+  final subti = [
+    'asad@gmail.com',
+    'asad@gmail.com',
+    'asad@gmail.com',
+    'asad@gmail.com',
+    'asad@gmail.com',
+    'asad@gmail.com',
+  ];
   // List<String>.generate(10, (i) => "Item $i");
 
   var items = <String>[];
   @override
   void initState() {
     items.addAll(duplicateItems);
+    items.addAll(subti);
     super.initState();
   }
 
@@ -66,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text(""),
+        title: new Text("Search Filter"),
       ),
       body: Container(
         child: Column(
@@ -93,6 +101,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 itemBuilder: (context, index) {
                   return ListTile(
                     title: Text('${items[index]}'),
+                    subtitle: Text('${subti[index]}'),
                   );
                 },
               ),
