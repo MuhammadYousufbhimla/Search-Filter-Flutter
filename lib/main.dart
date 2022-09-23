@@ -113,8 +113,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   return ListTile(
                     title: InkWell(
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => Test()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Test(
+                                        title: items[index],
+                                        subtitlee: subti[index],
+                                      )));
                         },
                         child: Text('${items[index]}')),
                     subtitle: Text('${subti[index]}'),
