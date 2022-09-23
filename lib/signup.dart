@@ -53,6 +53,7 @@ class FormValidationExample extends StatelessWidget with InputValidationMixin {
                         formGlobalKey.currentState!.save();
 
                         // use the email provided here
+                        //  Scaffold.of(context).showSnackBar(sn)
                       }
                     },
                     child: Text("Submit"))
