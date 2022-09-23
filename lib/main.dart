@@ -28,7 +28,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   TextEditingController editingController = TextEditingController();
 
-  final duplicateItems = List<String>.generate(10, (i) => "Item $i");
+  final duplicateItems = ['1', '2', '3', '4', '5', '6'];
+
+  // List<String>.generate(10, (i) => "Item $i");
+
   var items = <String>[];
   @override
   void initState() {
