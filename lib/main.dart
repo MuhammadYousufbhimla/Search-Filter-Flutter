@@ -1,3 +1,4 @@
+import 'package:dropdownapi/signup.dart';
 import 'package:dropdownapi/test.dart';
 import 'package:flutter/material.dart';
 
@@ -98,7 +99,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     labelText: "Search",
                     hintText: "Search",
                     prefixIcon: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FormValidationExample()));
+                      },
                       child: Icon(Icons.search),
                     ),
                     border: OutlineInputBorder(
