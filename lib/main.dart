@@ -1,3 +1,4 @@
+import 'package:dropdownapi/test.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(new MyApp());
@@ -110,7 +111,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 itemCount: items.length,
                 itemBuilder: (context, index) {
                   return ListTile(
-                    title: Text('${items[index]}'),
+                    title: InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Test()));
+                        },
+                        child: Text('${items[index]}')),
                     subtitle: Text('${subti[index]}'),
                   );
                 },
