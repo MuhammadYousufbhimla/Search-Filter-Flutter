@@ -28,7 +28,14 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   TextEditingController editingController = TextEditingController();
 
-  final duplicateItems = ['Anas', 'Yousuf', 'Anas1', '4', '5', '6'];
+  final duplicateItems = [
+    'Anas',
+    'Yousuf',
+    'Anas1',
+    'Rehman',
+    'Tauseef',
+    'Ajmal'
+  ];
   final subti = [
     'asad@gmail.com',
     'asad@gmail.com',
@@ -89,9 +96,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 decoration: InputDecoration(
                     labelText: "Search",
                     hintText: "Search",
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: InkWell(
+                      onTap: () {},
+                      child: Icon(Icons.search),
+                    ),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(25.0)))),
+                        borderRadius: BorderRadius.all(Radius.circular(30.0)))),
               ),
             ),
             Expanded(
