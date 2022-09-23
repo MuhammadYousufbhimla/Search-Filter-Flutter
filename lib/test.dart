@@ -19,9 +19,16 @@ class _TestState extends State<Test> {
       body: Center(
         child: ListView(
           children: [
-            ExpansionTile(title: Text(widget.title), children: [
-              Text(widget.subtitlee),
-            ]),
+            ExpansionTile(
+                title: Text(widget.title),
+                subtitle: Text(widget.subtitlee),
+                children: [
+                  Column(
+                    children: [
+                      Text(widget.subtitlee),
+                    ],
+                  ),
+                ]),
             Text(widget.title),
             Text(widget.subtitlee),
           ],
