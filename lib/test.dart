@@ -20,6 +20,7 @@ class _TestState extends State<Test> {
         child: ListView(
           children: [
             ExpansionTile(
+                textColor: Colors.green,
                 title: Text(widget.title),
                 subtitle: Text(widget.subtitlee),
                 children: [

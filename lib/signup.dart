@@ -51,6 +51,7 @@ class FormValidationExample extends StatelessWidget with InputValidationMixin {
                     onPressed: () {
                       if (formGlobalKey.currentState!.validate()) {
                         formGlobalKey.currentState!.save();
+
                         // use the email provided here
                       }
                     },
